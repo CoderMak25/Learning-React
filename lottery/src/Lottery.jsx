@@ -1,10 +1,10 @@
 import { useState } from "react"
 import "./Lottery.css";
-import {genTicket} from "./helper.js";
+import {genRanNum} from "./helper.js";
 
 
 export default function Lottery(){
-    let [ticket,setTicket] = useState(genTicket(3));
+    let [ticket,setTicket] = useState(genRanNum(3));
 
     return (
         <div>
