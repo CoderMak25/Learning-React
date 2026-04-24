@@ -1,14 +1,16 @@
 .ticket{
   border-radius: 16px;
   border: 2px solid;
-  width: 30%;
+  
   font-size: 2rem;
   display: flex;
   justify-content: space-between;
  
   
 }
-
+.outerBox{
+  width: 15rem;
+}
 .ticket span{
   margin: 1rem 2rem;
 }

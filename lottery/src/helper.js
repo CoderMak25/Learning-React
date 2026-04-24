@@ -7,4 +7,8 @@ function genRanNum(n){
     return arr;
 }
 
-export {genRanNum};
+function sum(arr){
+    return arr.reduce((sum,curr)=> sum+curr,0);
+}
+
+export {genRanNum,sum};
