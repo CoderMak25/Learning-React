@@ -4,9 +4,11 @@ import {genRanNum,sum} from "./helper.js";
 import Ticket from "./Ticket.jsx";
 
 
-export default function Lottery({n=3,winningSum=10}){
+export default function Lottery({n=3,winCondition}){
     let [ticket,setTicket] = useState(genRanNum(n));
-    let isWinning = sum(ticket) === winningSum;
+
+    let isWinning = winCondition(ticket);
+
     let buyTicket = ()=>{
         setTicket(genRanNum(n));
     }
