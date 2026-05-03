@@ -1,16 +1,66 @@
-# React + Vite
+# Forms
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Vite practice app focused on controlled form inputs. The current UI renders a single form with three fields: full name, username, and password.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Keeps form state in React using `useState`.
+- Updates each input through a shared change handler.
+- Prevents the default submit behavior.
+- Logs the submitted form data to the browser console.
+- Clears the form after submit.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- ESLint
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/main.jsx` - App entry point.
+- `src/App.jsx` - Renders the form component.
+- `src/Form.jsx` - Controlled form logic and submit handling.
+- `src/Form.css` - Form styles.
+- `src/index.css` - Global page styles.
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the dev server
+
+```bash
+npm run dev
+```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+### Preview the production build
+
+```bash
+npm run preview
+```
+
+### Run linting
+
+```bash
+npm run lint
+```
+
+## Form Behavior
+
+When you type into the fields, the component stores the values in local state. On submit, the form values are printed to the console and the inputs are reset to empty strings.
+
+## Notes
+
+- This project is intentionally minimal and is useful for practicing controlled inputs, form state, and submit handling in React.
+- The current styling is very simple and can be expanded if you want a more polished UI.
